@@ -73,16 +73,6 @@ There are options:
 You need install [Anaconda](https://www.continuum.io/downloads), then run below:
 
 ```bash
-# python2
-conda create --name=labelme python=2.7
-source activate labelme
-# conda install -c conda-forge pyside2
-conda install pyqt
-pip install labelme
-# if you'd like to use the latest version. run below:
-# pip install git+https://github.com/wkentaro/labelme.git
-```
-```bash
 # python3
 conda create --name=labelme python=3.6
 source activate labelme
@@ -99,10 +89,6 @@ pip install labelme
 You need install [docker](https://www.docker.com), then run below:
 
 ```bash
-# on macOS
-socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
-docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=docker.for.mac.host.internal:0 -v $(pwd):/root/workdir wkentaro/labelme
-
 # on Linux
 xhost +
 docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=:0 -v $(pwd):/root/workdir wkentaro/labelme
@@ -112,10 +98,6 @@ docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=:0 -v $(pwd):/root/wo
 
 ```bash
 # Ubuntu 14.04 / Ubuntu 16.04
-# Python2
-# sudo apt-get install python-qt4  # PyQt4
-sudo apt-get install python-pyqt5  # PyQt5
-sudo pip install labelme
 # Python3
 sudo apt-get install python3-pyqt5  # PyQt5
 sudo pip3 install labelme
