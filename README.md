@@ -72,6 +72,7 @@ There are options:
 
 You need install [Anaconda](https://www.continuum.io/downloads), then run below:
 
+#### Ubuntu
 ```bash
 # python3
 conda create --name=labelme python=3.6
@@ -82,6 +83,17 @@ source activate labelme
 pip install labelme
 # or you can install everything by conda command
 # conda install labelme -c conda-forge
+```
+
+#### Windows
+
+Install [Anaconda](https://www.continuum.io/downloads), then in an Anaconda Prompt run:
+
+```bash
+# python3
+conda create --name=labelme python=3.6
+conda activate labelme
+pip install labelme
 ```
 
 ### Docker
